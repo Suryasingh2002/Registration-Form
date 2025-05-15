@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles2.css" />
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
+    <form id="registrationForm" method="post" action='#'>
+      <fieldset>
+        <label for="name">Enter Your Full Name: <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
+        <label for="newPassword">Create Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+        <label for="confirmPassword">Confirm Password: <input id="confirmPassword" name="confirmPassword" type="password" pattern="[a-z0-5]{8,}" required /></label>
+        <label for="number">Mobile Number : <input id="number" name="number" type="tel" pattern="[0-9]{10}" required/></label>
+        <label for="dob">Date of Birth : <input id="dob" name="birth-date" type="date" reuired /></label>
+        </fieldset>
+      <fieldset>
+        <legend id="gender">Gender</legend>
+        <div id="gender-type">
+       <label for="check-male"><input id="check-male" type="radio" name="gender-type" class="inline"/> Male</label>
+        <label for="check-female"><input id="check-female" type="radio" name="gender-type" class="inline"/> Female</label>
+        <label for="check-trans-gender"><input id="check-trans-gender" type="radio" name="gender-type" class="inline" /> Trans-gender</label>
+        </div>
+    </fieldset>
+      <fieldset>
+        <legend>Are you fine relocating to other cities?</legend>
+        <label for="comfortable"><input id="comfortable" type="radio" name="account-type" class="inline"  /> Yes</label>
+        <label for="uncomfortable"><input id="uncomfortable" type="radio" name="account-type" class="inline" /> No</label>
+      </fieldset>
+      <fieldset>
+        <label for="profile-picture">Upload a Resume/CVV : <input id="profile-picture" type="file" name="file" /></label>
+        <label for="age">How many years of experience: <input id="age" type="number" name="age" min="0" max="15" /></label>
+        <label for="referrer">How did you hear about us?
+          <select id="referrer" name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">Youtube</option>
+            <option value="2">Linkedin</option>
+            <option value="3">Instagram</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label for="bio">Why are you intrested in the role?
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the ..."></textarea>
+        </label>
+      </fieldset>
+      <label for="terms-and-conditions">
+        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="#">terms and conditions</a>
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
+    <div id="errorMessages"></div>
+    <footer> Project 2025 <a href="#" target="_blank">Surya's</a></footer>
+    <script src="script2.js"></script>
+      </body>
+</html>
